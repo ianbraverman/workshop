@@ -15,14 +15,14 @@ export default function Puppies() {
         {isLoading ? (
           <li>Loading...</li>
         ) : (
-          puppies.data.map((puppy) => {
+          puppies.data.players.map((puppy) => (
             <li key={puppy.id}>
               <img src={puppy.imageUrl} />
               <h2>{puppy.name}</h2>
               <h3>{puppy.breed}</h3>
               <h3>{puppy.status}</h3>
-            </li>;
-          })
+            </li>
+          ))
         )}
       </ul>
     </article>
